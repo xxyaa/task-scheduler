@@ -1,0 +1,125 @@
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Segoe UI Variable", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #0f172a;
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(125, 211, 252, 0.36), transparent 35%),
+    radial-gradient(circle at 88% 12%, rgba(251, 191, 36, 0.24), transparent 32%),
+    linear-gradient(180deg, #f8fafc 0%, #e0f2fe 100%);
+  letter-spacing: 0.01em;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.dream-orb {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(22px);
+  opacity: 0.55;
+  animation: dream-float 9s ease-in-out infinite;
+}
+
+.dream-orb-a {
+  left: -8rem;
+  top: -3rem;
+  height: 18rem;
+  width: 18rem;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.45), rgba(236, 72, 153, 0));
+}
+
+.dream-orb-b {
+  right: -7rem;
+  top: 8rem;
+  height: 16rem;
+  width: 16rem;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.4), rgba(14, 165, 233, 0));
+  animation-delay: 1.3s;
+}
+
+.dream-orb-c {
+  left: 32%;
+  bottom: -8rem;
+  height: 20rem;
+  width: 20rem;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.38), rgba(168, 85, 247, 0));
+  animation-delay: 2.2s;
+}
+
+.dream-chip {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35), 0 8px 20px -10px rgba(255, 255, 255, 0.85);
+}
+
+.dream-fade-up {
+  animation: dream-fade-up 520ms ease both;
+}
+
+.dream-night .dream-orb {
+  opacity: 0.42;
+}
+
+.dream-night .dream-orb-a {
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.42), rgba(168, 85, 247, 0));
+}
+
+.dream-night .dream-orb-b {
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.35), rgba(14, 165, 233, 0));
+}
+
+.dream-night .dream-orb-c {
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.34), rgba(236, 72, 153, 0));
+}
+
+.dream-night h1,
+.dream-night h2,
+.dream-night p,
+.dream-night span,
+.dream-night label,
+.dream-night div,
+.dream-night button {
+  color: inherit;
+}
+
+.dream-night section,
+.dream-night article,
+.dream-night form,
+.dream-night input {
+  border-color: rgba(148, 163, 184, 0.35) !important;
+}
+
+@keyframes dream-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dream-float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-16px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
